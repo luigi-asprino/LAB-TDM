@@ -1,3 +1,4 @@
 .DS_Store
 out_*
 output_*
+_tmp*
