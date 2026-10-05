@@ -1,0 +1,19 @@
+{
+  "origine": "Clip sintetiche generate da lab_video.genera_clip; nessun materiale esterno",
+  "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+  "crf": [
+    18,
+    28,
+    38
+  ],
+  "preset": "fast",
+  "gop_massimo": 48,
+  "pixel_format": "yuv420p",
+  "fps": 24,
+  "frame": 120,
+  "indici_campioni": [
+    8,
+    40,
+    80
+  ]
+}

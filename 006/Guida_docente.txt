@@ -1,0 +1,69 @@
+LEZIONE 6 — COMPRESSIONE VIDEO: MOVIMENTO, BITRATE E QUALITÀ
+Durata: 90 minuti
+
+MATERIALE
+Aprire 006-CompressioneVideo.ipynb. Il file lab_video.py deve restare accanto
+al notebook; mantenere anche la sottocartella materiali.
+requirements.txt elenca le dipendenze Python. Le clip sono sintetiche,
+generate localmente: non richiedono download né materiali di terzi.
+Le misure fornite e la versione FFmpeg sono documentate in materiali.
+
+PREPARAZIONE
+Installare le dipendenze nel kernel che verrà usato in aula.
+Per la codifica reale verificare FFmpeg con encoder libx264 nel PATH.
+Provare il notebook dall'inizio alla fine prima della lezione.
+Il notebook parte con RICODIFICA=False per funzionare anche senza FFmpeg.
+In aula impostare True, rieseguire il setup e procedere, se FFmpeg è disponibile.
+In caso di problemi mantenere False: CSV, video e campioni decodificati
+consentono comunque analisi e confronto visivo. Non modificare CRFS o i parametri
+di generazione usando il percorso con risultati forniti: non corrisponderebbero
+più agli esperimenti salvati. I campioni forniti sono i frame 8, 40 e 80.
+I risultati prodotti dagli studenti sono salvati nella cartella risultati.
+
+SCANSIONE
+0–10: obiettivi, setup, anteprime e previsione sulla comprimibilità.
+10–20: residuo fra due frame, sottrazione in float, interpretazione spaziale.
+20–30: un blocco, SAD, vettore verso il riferimento; confronto raggio 2/12.
+30–40: richiamo alla pipeline di codifica e interpretazione del CRF.
+40–60: sei codifiche o risultati forniti, lettura della tabella e discussione.
+60–70: grafico bitrate–PSNR; confronto prima entro ciascuna sequenza.
+70–80: dettagli ingranditi e riproduzione dei video.
+80–90: discussione collettiva dei risultati, senza consegne.
+Se si accumula ritardo, mostrare soltanto il raggio 12 e una coppia di video.
+
+RISULTATI ATTESI E CHIAVI DI LETTURA
+Il vettore del blocco selezionato con raggio 12 deve essere (-6, 0):
+il riferimento è sei pixel a sinistra della posizione corrente.
+Il residuo compensato del blocco è nullo perché il test usa una traslazione
+esatta con texture identica. Questo risultato è costruito didatticamente,
+non è una proprietà generale dei video naturali.
+Con raggio 2 la corrispondenza esatta non è raggiungibile. La texture periodica
+può produrre un candidato ingannevole: il minimo della SAD non identifica
+sempre il movimento fisico. Fare osservare sia il vettore sia il residuo.
+
+Misure incluse (bitrate medio del file MP4, kb/s; PSNR RGB globale, dB):
+              CRF18          CRF28          CRF38
+lento       68.62 / 34.12  32.83 / 33.42  22.53 / 30.55
+veloce      91.75 / 37.06  42.64 / 35.27  28.75 / 31.07
+Per la clip veloce il risparmio CRF18 → CRF38 è circa 68.7%.
+Piccole differenze sono possibili con versioni diverse dell'encoder.
+
+La clip veloce richiede qui più bit allo stesso CRF, ma ha anche PSNR maggiore:
+non presentare il confronto come se fosse a parità di qualità misurata.
+La generazione cambia la velocità su una traiettoria ciclica: la frequenza dei
+rientri cambia anch'essa. Non isola una traslazione continua su un dominio infinito.
+I rientri non sono cambi di scena; l'esempio non dimostra il comportamento su
+stacchi di montaggio. Le clip sintetiche rendono interpretabile l'esperimento,
+ma i risultati non sono un benchmark su contenuti naturali.
+
+CRF è un controllo dell'encoder, non un parametro universale di qualità
+né un bitrate richiesto. Il preset resta fisso. I vettori della demo non sono
+quelli estratti dal bitstream H.264. La MAE del residuo non misura i bit.
+PSNR è calcolato dal MSE globale RGB rispetto al riferimento sintetico:
+include conversione colore, sottocampionamento 4:2:0 e perdita di codifica.
+Il bitrate include overhead MP4; nessun file contiene audio.
+Osservare le sequenze in movimento, oltre ai dettagli statici.
+
+COLLOCAZIONE
+Dopo la teoria sulla predizione del movimento e l'introduzione a H.264.
+La numerazione tematica non obbliga a svolgerla prima dei laboratori audio.
