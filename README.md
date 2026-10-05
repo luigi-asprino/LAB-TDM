@@ -64,7 +64,7 @@ Studio sperimentale del campionamento attraverso segnali sinusoidali generati in
 
 **Collegamento con la teoria:** digitalizzazione del suono e campionamento (modulo 3).
 
-[Apri il notebook](007/006.ipynb)
+[Apri il notebook](007/007.ipynb)
 
 ### Lezione 8 — Dallo spettro al filtro: FFT, STFT e filtri audio
 
@@ -72,7 +72,7 @@ Analisi dei segnali audio nel dominio della frequenza e nel piano tempo-frequenz
 
 **Collegamento con la teoria:** filtraggio e qualità audio (modulo 3).
 
-[Apri il notebook](008/007.ipynb)
+[Apri il notebook](008/008.ipynb)
 
 ### Lezione 9 — Compressione audio percettiva: dal PCM al MP3
 
@@ -80,4 +80,4 @@ Esplorazione della quantizzazione e di un modello semplificato del mascheramento
 
 **Collegamento con la teoria:** quantizzazione audio (modulo 3), psicoacustica e compressione audio MPEG (modulo 9).
 
-[Apri il notebook](009/008.ipynb)
+[Apri il notebook](009/009.ipynb)
