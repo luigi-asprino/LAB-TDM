@@ -2,6 +2,10 @@
 
 Il repository raccoglie i notebook e i materiali delle lezioni di laboratorio del corso di **Trattamento dei Dati Multimediali**. Le attività accompagnano le lezioni teoriche attraverso esperimenti su immagini, video e audio, svolti con Python.
 
+## Presentazione del corso
+
+Le slide introduttive del corso sono disponibili qui: [Slide introduttive](https://docs.google.com/presentation/d/1nqwwDtEDrNJQJZThwGhjYkMG8bW5IdWhWEnJCQ_Iyt0/edit?usp=sharing)
+
 ## Didattica sincrona
 
 Il percorso comprende **nove lezioni di circa 90 minuti**, svolte attraverso spiegazioni del docente, esecuzione guidata dei notebook, modifica dei parametri e discussione collettiva dei risultati. Gli studenti applicano i concetti teorici, osservano gli effetti delle elaborazioni e confrontano misure quantitative e qualità percepita.
