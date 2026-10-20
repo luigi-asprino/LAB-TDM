@@ -30,7 +30,9 @@ Esplorazione dei canali RGB e della distribuzione dei livelli di intensità. Att
 
 ### Lezione 3 — RGB e HSV: rappresentazione e percezione del colore
 
-Confronto tra i modelli RGB e HSV attraverso esperimenti di conversione, visualizzazione e modifica selettiva del colore. Si osservano il ruolo dei singoli canali, gli effetti delle variazioni di tonalità, saturazione e valore e le differenze tra distanze numeriche e percezione del colore.
+Confronto tra i modelli RGB e HSV attraverso esperimenti di conversione e visualizzazione. In RGB si analizzano il contributo dei singoli canali alla luminanza percepita e il legame tra intensità della luce e valori dei canali. In HSV si modificano separatamente tonalità, saturazione e valore, misurando l'effetto sulla luminanza percepita e quanti pixel escono dall'intervallo valido (clipping). Infine si verifica che cosa si perde nella conversione RGB ↔ HSV: l'errore di quantizzazione a 8 bit e l'instabilità della tonalità nelle zone a bassa saturazione.
+
+Il notebook evidenzia le API OpenCV e NumPy più importanti per lavorare sul colore (`cv2.imread`, `cv2.cvtColor`, `cv2.inRange`, `astype`, `np.clip`, `np.where`) e si chiude con un riepilogo su quando usare ciascuno spazio colore.
 
 **Collegamento con la teoria:** scienza del colore e modelli di colore nelle immagini (modulo 1).
 
