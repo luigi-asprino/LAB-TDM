@@ -44,7 +44,7 @@ Introduzione al video digitale come sequenza di fotogrammi. Si leggono i metadat
 
 **Collegamento con la teoria:** concetti fondamentali del video digitale (modulo 2).
 
-[Apri il notebook](004/video_editing.ipynb)
+[Apri il notebook](004/video_editing.ipynb) · [Note dopo la lezione](004/README.md)
 
 ### Lezione 5 — Video 360° e proiezioni equirettangolari
 
