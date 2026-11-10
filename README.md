@@ -48,7 +48,11 @@ Introduzione al video digitale come sequenza di fotogrammi. Si leggono i metadat
 
 ### Lezione 5 — Video 360° e proiezioni equirettangolari
 
-Esplorazione della rappresentazione dei video immersivi. A partire da fotogrammi equirettangolari si osservano le distorsioni della proiezione, si costruisce una rappresentazione cubemap e si estraggono viste prospettiche con orientamento e campo visivo modificabili.
+Esplorazione della rappresentazione dei video immersivi. Si parte dalla proiezione equirettangolare (ERP): come longitudine e latitudine vengono mappate sulle coordinate dei pixel, perché il frame ha aspect ratio 2:1 e perché la proiezione campiona la sfera in modo non uniforme. Il sovracampionamento verso i poli viene quantificato con il fattore 1/cos(latitudine). Si converte poi un frame ERP in cubemap e si estraggono viewport prospettiche, controllandone l'orientamento (yaw, pitch, roll) e il campo visivo.
+
+Accanto al frame del video, il notebook usa una griglia ERP sintetica di meridiani e paralleli. Poiché la sua geometria sulla sfera è nota, permette di distinguere gli effetti delle diverse proiezioni: la distorsione di campionamento dell'ERP, la sua ridistribuzione sulle facce del cubemap e la distorsione prospettica della viewport, in cui i cerchi massimi tornano rette. Durante la lezione è previsto un breve esercizio sulla sequenza di viewport, che si completa con un esercizio facoltativo per casa.
+
+Il notebook usa la libreria `py360convert` (`pip install py360convert`). Il video di esempio non è incluso nel repository: il link per scaricarlo si trova nel notebook.
 
 **Collegamento con la teoria:** video 360° e rappresentazione del contenuto immersivo (modulo 2).
 
