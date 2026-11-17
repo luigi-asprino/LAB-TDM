@@ -60,13 +60,15 @@ Il notebook usa la libreria `py360convert` (`pip install py360convert`). Il vide
 
 ### Lezione 6 — Compressione video: movimento, bitrate e qualità
 
-Analisi della ridondanza temporale mediante due brevi sequenze sintetiche con velocità di movimento diverse. Si confrontano i residui prima e dopo la compensazione del movimento e si sperimentano tre impostazioni di qualità nella codifica H.264. Il confronto tra dimensioni dei file, bitrate, PSNR e artefatti visivi introduce il compromesso tra compressione e qualità.
+Analisi della ridondanza temporale mediante due brevi sequenze sintetiche con velocità di movimento diverse. Si confrontano i residui prima e dopo la compensazione del movimento, anche con raggi di ricerca insufficienti, e si sperimentano tre impostazioni di qualità nella codifica H.264. Il confronto tra dimensioni dei file, bitrate e PSNR introduce il compromesso tra compressione e qualità.
 
-L'attività termina con una discussione collettiva, senza consegne. Sono disponibili video già codificati e misure di riferimento per svolgere l'analisi anche senza FFmpeg; la ricodifica richiede FFmpeg con l'encoder `libx264`.
+Si analizza poi la struttura del bitstream con `ffprobe`: tipi di fotogramma I, P e B, dimensione di ciascun frame e peso dei keyframe. Un esercizio facoltativo per casa varia l'intervallo fra keyframe.
+
+L'attività non prevede consegne. Sono disponibili video già codificati e misure di riferimento, anche per singolo frame, per svolgere l'analisi anche senza FFmpeg; la ricodifica richiede FFmpeg con l'encoder `libx264` e `ffprobe`.
 
 **Collegamento con la teoria:** rateo e distorsione (modulo 5), predizione del movimento e compressione video (modulo 7), H.264/AVC (modulo 8).
 
-[Apri il notebook](006/006-CompressioneVideo.ipynb) · [Guida docente](006/Guida_docente.txt)
+[Apri il notebook](006/006-CompressioneVideo.ipynb)
 
 ### Lezione 7 — Campionamento audio e teorema di Nyquist
 

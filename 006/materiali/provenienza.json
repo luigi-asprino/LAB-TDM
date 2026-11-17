@@ -15,5 +15,13 @@
     8,
     40,
     80
-  ]
+  ],
+  "misure_derivate": {
+    "file": [
+      "misure.csv (colonna psnr_y_db)",
+      "soglia_420.csv",
+      "frame.csv"
+    ],
+    "note": "Calcolate dai video in questa cartella, decodificati con FFmpeg 6.1.1; la conversione RGB->YUV 4:2:0 usa le impostazioni predefinite di FFmpeg, come codifica()"
+  }
 }
