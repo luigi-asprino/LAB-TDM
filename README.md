@@ -68,7 +68,7 @@ L'attività non prevede consegne. Sono disponibili video già codificati e misur
 
 **Collegamento con la teoria:** rateo e distorsione (modulo 5), predizione del movimento e compressione video (modulo 7), H.264/AVC (modulo 8).
 
-[Apri il notebook](006/006-CompressioneVideo.ipynb)
+[Apri il notebook](006/006-CompressioneVideo.ipynb) · [Slide introduttive](https://docs.google.com/presentation/d/1smDluSfw80nhMITgG4Pvi7T7g35Q0Vo2560sofdcdkc/edit?usp=sharing)
 
 ### Lezione 7 — Campionamento audio e teorema di Nyquist
 
