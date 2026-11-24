@@ -72,11 +72,15 @@ L'attività non prevede consegne. Sono disponibili video già codificati e misur
 
 ### Lezione 7 — Campionamento audio e teorema di Nyquist
 
-Studio sperimentale del campionamento attraverso segnali sinusoidali generati in Python. Si confrontano rappresentazioni e ascolti a frequenze di campionamento diverse, osservando l'aliasing e discutendo il caso limite della soglia di Nyquist. Gli esperimenti collegano la frequenza del segnale alla scelta della frequenza di campionamento.
+Studio sperimentale del campionamento con toni puri, uno sweep e un segnale armonico, tutti generati in Python. Si prevede la frequenza di alias e la si verifica con spettro e ascolto. Si confrontano poi due ricostruzioni dei campioni: la ricostruzione a gradini (zero-order hold) lascia immagini udibili, il filtro di ricostruzione del convertitore digitale-analogico le rimuove. Il caso limite $f_s = 2f$ mostra che con due campioni per periodo ampiezza e fase non sono più separabili. Appena sopra la soglia la ricostruzione richiederebbe un filtro ideale: da qui la necessità di un margine.
+
+Uno sweep campionato a 8 kHz rende udibile il ripiegamento delle frequenze. Infine, la decimazione di un dente di sega con e senza filtro anti-aliasing mostra che il filtro attenua l'aliasing senza eliminarlo, e che un filtro più ripido intacca anche la banda utile.
+
+I suoni si ascoltano con un widget nel notebook, che funziona anche su Colab. Non servono file esterni.
 
 **Collegamento con la teoria:** digitalizzazione del suono e campionamento (modulo 3).
 
-[Apri il notebook](007/007.ipynb)
+[Apri il notebook](007/007.ipynb) · [Guida alla lezione](007/README.md) · [Slide introduttive](https://docs.google.com/presentation/d/1C39EN3gVrnE-6zQE8qHCUaaub1BvB6ppvZGZqDFSDlw/edit?usp=sharing)
 
 ### Lezione 8 — Dallo spettro al filtro: FFT, STFT e filtri audio
 
